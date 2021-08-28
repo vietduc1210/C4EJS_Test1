@@ -9,7 +9,6 @@ for(let i=0;i<date.length;i++){
 if(date[2]%4===0&&date[2]>0){
     if(date[1]===2){
         if(date[0]>0 && date[0]<30){
-            alert("Valid");
             boolean = true;
             if(date[0]===29){
                 date[0]=1;
@@ -19,13 +18,10 @@ if(date[2]%4===0&&date[2]>0){
                 date[0]+=1;
             }
         }
-        else{
-            alert("Error");
-        }
+        
     }
     else if(month1.includes(date[1])){
         if(date[0]>0 && date[0]<32){
-            alert("Valid");
             boolean = true;
             if(date[0]===31&&date[1]!==12){
                 date[0]=1;
@@ -40,13 +36,10 @@ if(date[2]%4===0&&date[2]>0){
                 date[0]+=1;
             }
         }
-        else{
-            alert("Error");
-        }
+        
     }
     else if(month2.includes(date[1])){
         if(date[0]>0 && date[0]<31){
-            alert("Valid");
             boolean = true;
             if(date[0]===30){
                 date[0]=1;
@@ -56,19 +49,12 @@ if(date[2]%4===0&&date[2]>0){
                 date[0]+=1;
             }
         }
-        else{
-            alert("Error");
-        }
-    }
-    else{
-        alert("Error");
     }
     
 }
 else if(date[2]%4!==0&&date[2]>0){
     if(date[1]===2){
         if(date[0]>0 && date[0]<29){
-            alert("Valid");
             boolean = true;
             if(date[0]===28){
                 date[0]=1;
@@ -78,13 +64,9 @@ else if(date[2]%4!==0&&date[2]>0){
                 date[0]+=1;
             }
         }
-        else{
-            alert("Error");
-        }
     }
     else if(month1.includes(date[1])){
         if(date[0]>0 && date[0]<32){
-            alert("Valid");
             boolean = true;
             if(date[0]===31&&date[1]!==12){
                 date[0]=1;
@@ -100,9 +82,6 @@ else if(date[2]%4!==0&&date[2]>0){
             }
         }
 
-        else{
-            alert("Error");
-        }
     }
     else if(month2.includes(date[1])){
         if(date[0]>0 && date[0]<31){
@@ -116,18 +95,15 @@ else if(date[2]%4!==0&&date[2]>0){
                 date[0]+=1;
             }
         }
-        else{
-            alert("Error");
-        }
+      
     }
-    else{
-        alert("Error");
-    }
+   
     
+}
+
+if(boolean === true){
+    alert("The next day is " +date.join("/"));
 }
 else{
     alert("Error");
-}
-if(boolean === true){
-    alert("The next day is " +date.join("/"));
 }
